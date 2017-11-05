@@ -1,0 +1,72 @@
+.producto-single h2{
+    text-align: left;
+    margin-bottom: 0px;
+    margin-top: 25%;
+}
+.producto-single .carrousel img{
+    margin: 10px 0;
+}
+.producto-single .price{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.producto-single .subtitle{
+    margin-bottom: 40px;    
+}
+.producto-single .size {
+    margin: 15px 0;
+}
+.producto-single .size span{
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    padding: 10px 3px;
+    line-height: 0;
+    margin: 3px 5px;
+    font-size: 9px;    
+    text-align: center;
+    cursor: pointer;
+}
+
+.producto-single .size span:hover{
+    background-color: var(--gris-1);
+    color: #fff;
+}
+
+.producto-single .qty {
+    margin: 15px 0;
+}
+.producto-single .qty input{
+    border: 1px solid #000;
+    border-radius: 50px;
+    width: 80px;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.producto-single .qty input:focus{
+    outline: none;
+}
+
+.producto-single button{
+    margin-top: 30px;
+    padding: 5px 30px;
+    font-size: 18px;
+    width: 100%;
+}
+/*slider*/
+.slider-nav{
+    cursor: pointer;
+}
+ul{
+    padding: 0;
+}
+button.slick-arrow{
+    position: absolute;
+}

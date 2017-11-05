@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fabricantes de Jeans en Colombia, Jeans levanta cola, ventas al por mayor.">
+    <meta name="keywords" content="Jeans levanta cola, jeans por mayor, catalogo de jeans, gran san, madrugon jeans, Jean de moda, jean promocion, jeans colombianos">
+    <meta name="author" content="Esteban Lopez | Jimena Martin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#dbb05a">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <title>Gall Studio</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109225402-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-109225402-1');
+    </script>    
+</head>
+
+<body>
+    <!-- header fixed -->
+    <div class="content content-header">
+        <div class="cartBar">
+            <div class="row">
+                <div class="col-sm-10 hidden-xs"> <img src="img/colombian.png" alt="producto colombiano" /> Producto Colombiano</div>
+                <div class="col-xs-5 hidden-sm hidden-md hidden-lg"> <img src="img/menu.svg" alt="menu mobile" class="menuMob" /></div>
+
+                <div class="col-sm-1 col-xs-3">Registro</div>
+                <div class="col-sm-1 col-xs-4">Carrito <img src="img/cart.png" alt="cart" />
+
+                <div class="dropDown">
+                    <div class="producto">
+                        <div class="left">
+                            <img src="img/cart-img.png" alt="card">
+                        </div>
+                        <div class="right">
+                            <div><b>NOMBRE JEAN DAMA</b></div>
+                            <span>Ref: 123456</span>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td> Talla </td>
+                                        <td> Cantidad </td>
+                                        <td> Total </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> 12 </td>
+                                        <td> 10 </td>
+                                        <td> $ 50.000 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 12 </td>
+                                        <td> 10 </td>
+                                        <td> $ 50.000 </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="producto">
+                        <div class="left">
+                            <img src="img/cart-img.png" alt="card">
+                        </div>
+                        <div class="right">
+                            <div><b>NOMBRE JEAN DAMA</b></div>
+                            <span>Ref: 123456</span>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td> Talla </td>
+                                        <td> Cantidad </td>
+                                        <td> Total </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> 12 </td>
+                                        <td> 10 </td>
+                                        <td> $ 50.000 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 12 </td>
+                                        <td> 10 </td>
+                                        <td> $ 50.000 </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <p> Total: <strong>$ 45.000</strong></p>
+                        <button class="btn_dark"> CHECKOUT </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- menu -->
+        <nav class="main-menu">
+            <ul>
+                <!-- <li class="hidden-sm hidden-md hidden-lg"><a href="index.html">Inicio</a></li> -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li class="logo"><a href="index.html"><img src="img/logo-blanco.png" alt="LOGO"></a></li>
+                <li><a href="#">Mayoristas</a></li>
+                <li><a href="contacto.html">Contácto</a></li>
+            </ul>
+        </nav>
+        <!-- end menu -->
+    </div>
+    <!-- end header fixed -->
+
+    <div class="container producto-single" ng-app="myApp" ng-controller="productCtrl">
+        <section  ng-repeat="item in products | filter:{ id: productId }">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-1 carrousel">
+                    <ul class="slider-nav">
+                        <li><img ng-src="{{ item.mainImage }}" alt="jean dama levanta cola"></li>
+                        <li ng-repeat="img in item.gallery">
+                            <img ng-src="{{ img }}" alt="producto">
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="slider-for">
+                        <li><img ng-src="{{ item.mainImage }}" alt="jean dama levanta cola"></li>
+                        <li ng-repeat="img in item.gallery">
+                            <img ng-src="{{ img }}" alt="producto">
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h2> <strong>
+                            {{ item.name }}
+                        </strong>
+                    </h2>
+                    <p>Ref: {{ item.ref }}</p>
+
+                    <div class="price">
+                        <strong>{{ item.price }} COP</strong>
+                    </div>
+                    <div class="subtitle">
+                        {{ item.description }}
+                    </div>
+
+                    <div class="size">
+                        Tallas Disponibles: <span ng-repeat="size in item.sizes">{{ size }}</span>
+                    </div>
+
+                    <!-- <div class="qty">
+                        Cantidad: <input type="number">
+                    </div> -->
+                    <button>CONTACTO</button>
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+    <footer>
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-4"><img src="img/logo-footer.png" alt="logo footer"></div>
+                        <div class="col-md-4">
+                            <div>Ubicación</div>
+                            <ul>
+                                <li>Centro Comercial San Carlos</li>
+                                <li>Calle 12 # 13 - 69 Local S 33 | Bogotá, Colombia</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <div>Contácto</div>
+                            <ul>
+                                <li>Celular: 314 2258662 - 312 2017060</li>
+                                <li>Email: ailemlopez@hotmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/menu.js" type="text/javascript"></script>
+        <script src="js/slick.min.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+
+        <!-- Angular -->
+        <script src="js/angular.min.js" type="text/javascript"></script>
+        <script src="js/app.js" type="text/javascript"></script>
+    </footer>
+
+</body>
+
+</html>

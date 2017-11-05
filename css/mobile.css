@@ -1,0 +1,118 @@
+@media(max-width: 768px){
+    /*generales*/
+    button {
+        width: 100%;
+        height: 40px;
+    }
+   section{
+       margin: 10px 0;
+   }
+   body:not(.front) .container{
+       padding-top: 50px;
+   }
+   /*header*/
+   .cartBar{
+        padding: 0 15px;
+        height: 40px;
+   }
+   .cartBar .row{
+       height: 100%;
+    }
+    .cartBar .row  > div {
+        height: 100%;        
+        padding: 10px 10px;
+    }
+   .cartBar div div:nth-child(2){
+       text-align: left;
+       border: 0;
+   }
+   .cartBar .menuMob {width: 25px;}
+    /*menu*/
+   nav{
+       position: absolute;
+       height: calc(100vh - 40px);
+       width: 80%;       
+       z-index: 9;
+       top: 40px;
+       display: none;
+   }
+   nav ul {
+        flex-wrap: wrap;
+        padding: 0;
+        font-size: 16px;
+   }
+   nav ul li{
+      width: 100%;
+   }
+   nav ul li a{
+        padding: 15px 15px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.21);
+   }
+   nav li.logo{order: 1;}
+   nav li.logo a{border: 0;}
+
+   .dropDown{
+       min-width: 280px;
+   }
+    /*home*/
+    .slider{
+        padding-top: 15px;
+    }
+    .loader{
+        background-size: 150%;
+        background-position: 50% 50%;
+    }
+    .slick-slider .slick-arrow{
+        bottom: calc(50% - 15px);
+        width: 30px;
+        height: 30px;
+    }
+    .slick-slider .slick-arrow.slick-prev{
+        left: 10px;
+        transform: none;
+    }
+    .slick-slider .slick-arrow.slick-next{
+        left: auto;
+        right: 10px;
+        transform: none;
+    }
+
+    .news{
+        padding: 15px;
+    }
+    .news .col-md-6{
+        padding: 0;
+        text-align: left;
+    }
+    .blog{
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+    .blog .left{padding-left: 15px;}
+    .blog .left p{padding-left: 0;}
+    .blog .right h2{
+        position: static;
+        transform: none;
+    }
+    .blog .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .blog .row .left{order: 2;}
+
+    
+    /*producto page*/
+    .slider-nav{
+        display: none;
+    }
+    .slider-for.slick-slider .slick-arrow.slick-prev{
+        bottom: -50px;
+        left: 30px;
+    }
+    .slider-for.slick-slider .slick-arrow.slick-next{
+        bottom: -50px;
+        left: auto;
+        right: 30px;     
+    }
+}
