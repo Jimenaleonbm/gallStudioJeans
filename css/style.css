@@ -34,6 +34,18 @@ img{
 ul{list-style:none;}
 .overflow {overflow: hidden}
 
+.socialMedia{
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.socialMedia li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.socialMedia li:hover{
+    opacity: .7;
+}
+
 .cartBar{
     background-color: var(--gris-1);
     color: #fff;
@@ -606,6 +618,15 @@ body:not(.front).contact .container{
     margin-bottom: 15px;
 }
 
+/*mayoristas*/
+.mayorista{
+    padding-top: 80px;
+}
+
 
   /*OCultos*/
   .cartBar .col-sm-1{display: none;}
+
+
+
+
