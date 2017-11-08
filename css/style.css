@@ -630,3 +630,4 @@ body:not(.front).contact .container{
 
 
 
+  .alRevez {unicode-bidi:bidi-override; direction: rtl; }

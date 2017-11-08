@@ -182,50 +182,6 @@
             
     </section>
 
-<script type="text/javascript">
-        
-    function loadApp() {
-    
-        // Create the flipbook
-    
-        $('.flipbook').turn({
-                // Width
-    
-                width:922,
-                
-                // Height
-    
-                height:600,
-    
-                // Elevation
-    
-                elevation: 50,
-                
-                // Enable gradients
-    
-                gradients: true,
-                
-                // Auto center this flipbook
-    
-                autoCenter: true
-    
-        });
-        
-    }
-    
-    // Load the HTML4 version if there's not CSS transform
-    
-    yepnope({
-        test : Modernizr.csstransforms,
-        yep: ['js/turn.js'],
-        nope: ['js/turn.html4.min.js'],
-        both: ['basic/css/basic.css'],
-        complete: loadApp
-    });
-        
-</script>        
-
-
 
     
     <!-- newslettter sending blue -->
@@ -327,8 +283,10 @@
                         <!-- <li>Info. Envios</li>
                         <li>Info. Devoluciones</li>
                         <li>Info. Pagos</li> -->
-                        <li>Celular: 314 2258662 - 312 2017060</li>
+                        <!-- <li >Celular: 314 2258662 - 312 2017060</li> -->
+                        <li  class="alRevez">0607102 213 - 2668522 413 :raluleC</li>
                         <li>Email: ailemlopez@hotmail.com</li>
+                        <li class="alRevez">moc.liamtoh@zepolmelia :liamE</li>
                     </ul>
                 </div>
             </div>
@@ -338,27 +296,6 @@
         <script src="js/menu.js" type="text/javascript"></script>
         <script src="js/slick.min.js" type="text/javascript"></script>
         <script src="js/main.js" type="text/javascript"></script>
-
-        <!-- mapa tag-->
-        <script>
-                function initMap() {
-                    var uluru = {lat: 4.601750, lng: -74.080420};
-                    var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 16,
-                    center: uluru
-                    });
-                    var marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map,
-                    scrollwheel: false
-                    });
-                }
-            </script>
-            <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-hRyA8e1RJ7DXhu7wOW4tQKfnO_ZMCYY&callback=initMap">
-            </script>
-        <!-- end mapa -->
-
 
     </footer>
 </body>
