@@ -69,13 +69,13 @@
                                 <tbody>
                                     <tr>
                                         <td> 12 </td>
-                                        <td> 10 </td>
-                                        <td> $ 50.000 </td>
+                                        <td> 1 </td>
+                                        <td> $ 65.000 </td>
                                     </tr>
                                     <tr>
                                         <td> 12 </td>
-                                        <td> 10 </td>
-                                        <td> $ 50.000 </td>
+                                        <td> 1 </td>
+                                        <td> $ 65.000 </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -100,20 +100,20 @@
                                 <tbody>
                                     <tr>
                                         <td> 12 </td>
-                                        <td> 10 </td>
-                                        <td> $ 50.000 </td>
+                                        <td> 1 </td>
+                                        <td> $ 65.000 </td>
                                     </tr>
                                     <tr>
                                         <td> 12 </td>
-                                        <td> 10 </td>
-                                        <td> $ 50.000 </td>
+                                        <td> 1 </td>
+                                        <td> $ 65.000 </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                     <div class="total">
-                        <p> Total: <strong>$ 45.000</strong></p>
+                        <p> Total: <strong>$ 130.000</strong></p>
                         <button class="btn_dark"> CHECKOUT </button>
                     </div>
                 </div>
@@ -156,17 +156,17 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h2> <strong>
-                            {{ item.name }}
+                    <h2> <strong ng-bind="item.name">
+                           
                         </strong>
                     </h2>
-                    <p>Ref: {{ item.ref }}</p>
+                    <p>Ref: <span ng-bind="item.ref"></span></p>
 
                     <div class="price">
-                        <strong>{{ item.price }} COP</strong>
+                        <strong><span ng-bind="item.price"></span> COP</strong>
                     </div>
                     <div class="subtitle">
-                        {{ item.description }}
+                      <span ng-bind="item.description"></span>
                     </div>
 
                     <div class="size">

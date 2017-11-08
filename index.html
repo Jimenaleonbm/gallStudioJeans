@@ -191,8 +191,8 @@
                                 </a>
                             </div>
                             <div>
-                                <p>{{ item.name }}</p>
-                                <p><strong>COP  {{ item.price }}</strong></p>
+                                <p ng-bind="item.name"></p>
+                                <p><strong>COP  <span ng-bind="item.price"></span></strong></p>
                             </div>
                     </div>
                     <!-- end product -->
@@ -229,8 +229,8 @@
                                 </a>
                             </div>
                             <div>
-                                <p>{{ item.name }}</p>
-                                <p><strong>COP  {{ item.price }}</strong></p>
+                                <p ng-bind="item.name"></p>
+                                <p><strong>COP <span ng-bind="item.price"></span></strong></p>
                             </div>
                     </div>
                     <!-- end product --> 
