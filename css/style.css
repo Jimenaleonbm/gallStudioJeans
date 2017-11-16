@@ -273,6 +273,12 @@ video {
     background-size: cover;
     transition: 1s opacity;
 }
+.mainSection img {
+    position: fixed;
+    top: 104px;
+    width: 100%; 
+}
+
 .containter-scroll:before{
     content: "";
     width: 40px;

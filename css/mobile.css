@@ -115,4 +115,21 @@
         left: auto;
         right: 30px;     
     }
+    .mainSection img {
+        top: 40px;
+    }
+    .front .containter-scroll{
+        margin-top: 30vh;
+    }
+    .banners .rigth{
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+    .news .email button[type="submit"]{
+        width: calc(100% - 30px);
+        margin-top: 10px;
+    }
+    .news .email input{
+        width: calc(100% - 30px);
+    }
 }
