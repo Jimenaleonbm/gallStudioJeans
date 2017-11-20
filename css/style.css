@@ -258,7 +258,7 @@ nav ul li.logo a{
     background-color: #fff;
     position: relative;
     z-index: 1;
-    margin-top: 100vh;
+    margin-top: 520px;
 }
 video { 
     position: fixed;
@@ -632,8 +632,5 @@ body:not(.front).contact .container{
 
   /*OCultos*/
   .cartBar .col-sm-1{display: none;}
-
-
-
 
   .alRevez {unicode-bidi:bidi-override; direction: rtl; }
