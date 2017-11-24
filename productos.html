@@ -29,12 +29,12 @@
     </script>    
 </head>
 
-<body>
+<body ng-app="myApp">
     <!-- header fixed -->
     <div class="content content-header">
         <div class="cartBar">
             <div class="row">
-                <div class="col-sm-10 hidden-xs"> <img src="img/colombian.png" alt="producto colombiano" /> Producto Colombiano</div>
+                <div class="col-sm-9 hidden-xs"> <img src="img/colombian.png" alt="producto colombiano" /> Producto Colombiano</div>
                 <div class="col-xs-5 hidden-sm hidden-md hidden-lg"> <img src="img/menu.svg" alt="menu mobile" class="menuMob" /></div>
 
                 <div class="col-sm-2 col-xs-6" align="right">
@@ -44,78 +44,46 @@
                         <li><a href="https://twitter.com/gall_studio?lang=es" target="_blank"><img src="img/twitter.svg" alt="twitter"></a></li>
                 </ul></div>
 
-                <div class="col-sm-1 col-xs-3">Registro</div>
-                <div class="col-sm-1 col-xs-4">Carrito <img src="img/cart.png" alt="cart" />
+                <!-- <div class="col-sm-1 col-xs-3">Registro</div> -->
+                <div class="col-sm-1 col-xs-4" ng-controller="cartCtrl" >Carrito <img src="img/cart.png" alt="cart" class="maincart" ng-class="{'cartactive': cartactive}"/>
 
-                <div class="dropDown">
-                    <div class="producto">
-                        <div class="left">
-                            <img src="img/cart-img.png" alt="card">
+                    <div class="dropDown">
+                        <div class="producto" ng-repeat="itemCart in cartList track by $index">
+                            <div class="left">
+                                    <img ng-src="{{ itemCart.mainImage }}" alt="cart">
+                            </div>   
+                            <div class="right">
+                                <div>
+                                    <b>{{itemCart.name}}</b>
+                                </div>
+                                <!-- <span>Ref: {{itemCart.ref}}</span> -->
+                            
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td> Talla </td>
+                                            <td> Cantidad </td>
+                                            <td> Total </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="item in itemCart.order | orderBy: 'size'">
+                                            <td> {{item.size}} </td>
+                                            <td> {{item.quantity}} </td>
+                                            <td> {{itemCart.price * item.quantity | currency:undefined:0}} </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <div class="right">
-                            <div><b>NOMBRE JEAN DAMA</b></div>
-                            <span>Ref: 123456</span>
 
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <td> Talla </td>
-                                        <td> Cantidad </td>
-                                        <td> Total </td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td> 12 </td>
-                                        <td> 10 </td>
-                                        <td> $ 50.000 </td>
-                                    </tr>
-                                    <tr>
-                                        <td> 12 </td>
-                                        <td> 10 </td>
-                                        <td> $ 50.000 </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="producto">
-                        <div class="left">
-                            <img src="img/cart-img.png" alt="card">
-                        </div>
-                        <div class="right">
-                            <div><b>NOMBRE JEAN DAMA</b></div>
-                            <span>Ref: 123456</span>
-
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <td> Talla </td>
-                                        <td> Cantidad </td>
-                                        <td> Total </td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td> 12 </td>
-                                        <td> 10 </td>
-                                        <td> $ 50.000 </td>
-                                    </tr>
-                                    <tr>
-                                        <td> 12 </td>
-                                        <td> 10 </td>
-                                        <td> $ 50.000 </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="total">
-                        <p> Total: <strong>$ 45.000</strong></p>
-                        <button class="btn_dark"> CHECKOUT </button>
+                        <div class="total" ng-if="total !== 0">
+                                <p> Total: <strong>{{total | currency:undefined:0}}</strong></p>
+                                <button class="btn_dark"> CHECKOUT </button>
+                            </div>
+                            <div class="total" ng-if="total === 0">Aun no hay productos en tu carrito</div>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
 
@@ -133,6 +101,7 @@
         <!-- end menu -->
     </div>
     <!-- end header fixed -->
+
     <div class="container" ng-app="myApp" ng-controller="mainCtrl">
         <section>
             <h2><strong>PRODUCTOS</strong></h2>
@@ -151,7 +120,7 @@
                             </div>
                             <div>
                                 <p>{{ item.name }}</p>
-                                <p><strong>COP  {{ item.price }}</strong></p>
+                                <p><strong>COP  {{ item.price | currency:undefined:0}}</strong></p>
                             </div>
                     </div>
                     <!-- end product --> 

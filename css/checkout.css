@@ -1,5 +1,6 @@
-.container.cartResume{
-    margin-top: 100px !important;
+.container.cartResume h2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .table>tbody>tr>td {
     vertical-align: middle;
@@ -15,21 +16,51 @@
     margin: 0 5px 0 0;
 }
 
-.cartResume td div{
-    display: inline-block;
-    vertical-align: middle;
-    padding: 8px;
-}
-
-.cartResume td div p:nth-child(1){
+.cartResume .info p:nth-child(1){
     font-weight: 800;
+    text-transform: uppercase;
 }
-.cartResume td div p{
+.cartResume .info p{
     margin: 0;
 }
-.cartResume td img{
-    width: 50px;
+.resumeTable1 {
+    display: flex;
+    padding: 10px;
 }
+.resumeTable1 > div.img {
+    flex-basis: 70px;
+}
+.cartResume  img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: 0 0;
+}
+.resumeTable2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.resumeTable2 .resumeBuy:nth-child(1){
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.resumeTable2 .resumeBuy:nth-child(1) span {
+    padding: 10px 15px;
+}
+.resumeTable2 .resumeBuy{
+    display: flex;
+}
+.resumeTable2 .resumeBuy span{
+    display: inline-block;
+    padding: 3px 18px;
+    flex-basis: 30%;
+}
+.resumeTable2 .resumeBuy span:last-child{
+    flex-basis: 40%;
+}
+
+
 .cartResume td span{
     font-size: 14px;
 }
@@ -43,7 +74,7 @@
     padding: 2px 0;
 }
 
-.cartResume table input{
+.resumeTable2  input[type="number"]{
     -webkit-appearance: none;
     box-shadow: none;
     border: 1px solid #efefef;
@@ -52,6 +83,7 @@
     margin: 0;
     line-height: inherit;
     width: 55px;
+    padding: 1px 7px;
 }
 
 .cartResume .resumeBuy td:nth-child(1){

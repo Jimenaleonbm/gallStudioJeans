@@ -15,29 +15,52 @@
 .producto-single .subtitle{
     margin-bottom: 40px;    
 }
-.producto-single .size {
-    margin: 15px 0;
+
+.size li{
+    position: relative;
+    display: inline-block;
 }
-.producto-single .size span{
+
+.size li input[type=radio]{
+    position: absolute;
+    visibility: hidden;
+}
+
+
+.size li label{
     position: relative;
     top: -2px;
     display: inline-block;
     border: 1px solid #000;
     border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    padding: 10px 3px;
+    width: 30px;
+    height: 30px;
+    padding: 13px 3px;
     line-height: 0;
     margin: 3px 5px;
-    font-size: 9px;    
+    font-size: 12px;    
     text-align: center;
     cursor: pointer;
 }
 
-.producto-single .size span:hover{
-    background-color: var(--gris-1);
-    color: #fff;
+.size li:hover label{
+    background-color: #d2d2d2;
 }
+.size li .check {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -2px;
+    left: -2px;
+    border-radius: 50%;
+    z-index: -1;
+}
+input[type=radio]:checked ~ .check {
+    background-color: #d2d2d2;
+  }
+
+
+
 
 .producto-single .qty {
     margin: 15px 0;
@@ -60,6 +83,9 @@
     font-size: 18px;
     width: 100%;
 }
+/* .producto-single button[disabled="disabled"]{
+    opacity: .5;
+} */
 /*slider*/
 .slider-nav{
     cursor: pointer;
@@ -69,4 +95,38 @@ ul{
 }
 button.slick-arrow{
     position: absolute;
+}
+button img {
+    display: none;
+    height: 30px;
+    width: 100%;
+    display: none;
+}
+button.adding {
+    background: #dbb05a;
+    transition: .5s all ease;
+}
+button.adding img{
+    display: block;
+    position: absolute;
+    top: -30px;
+    object-fit: contain;
+    animation: showcart 1.5s 1;
+    left: 0;
+    /* animation-timing-function: linear; */
+}
+
+button.adding{
+    position: relative;
+    overflow: hidden;
+    color: #dbb05a;
+    /* animation: showcart 1s infinite; */
+}
+@keyframes showcart{
+    0% {
+        top: -30px;
+    }
+    100% {
+        top: 100%;
+    }
 }

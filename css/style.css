@@ -56,11 +56,33 @@ ul{list-style:none;}
     padding: 5px 2px;
 }
 
-.cartBar  img{
+.cartBar img{
     width: 20px;
     position: relative;
     top: -2px;
 }
+.cartBar .maincart.cartactive{
+    animation: squeeze 1.2s infinite;
+}
+@keyframes squeeze{
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+      
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+}
+
+
 .cartBar a {
     color: #fff;
 }
@@ -251,9 +273,7 @@ nav ul li.logo a{
         opacity: 1;
     }
 } */
-.front {
 
-}
 .front .containter-scroll {
     background-color: #fff;
     position: relative;
@@ -556,6 +576,8 @@ body:not(.front).contact .container{
 }
 .cartBar .col-sm-1:hover .dropDown{
     display: block;
+    max-height: 90vh;
+    overflow: auto;
 }
 .dropDown:before{
     content: "";
@@ -599,10 +621,13 @@ body:not(.front).contact .container{
     flex-basis: 80%;
     padding-left: 15px;
     text-align: left;
+    padding-top: 0;
 }
-.dropDown .producto .right > div {padding: 0;}
+.dropDown .producto .right > div {
+    padding: 0;
+}
+
 .dropDown table {
-    margin-top: 15px;
     width: 100%;
     text-align: center;
 }
@@ -631,6 +656,6 @@ body:not(.front).contact .container{
 
 
   /*OCultos*/
-  .cartBar .col-sm-1{display: none;}
+  /* .cartBar .col-sm-1{display: none;} */
 
   .alRevez {unicode-bidi:bidi-override; direction: rtl; }
